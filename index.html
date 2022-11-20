@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Responsive Registration Form</title>
     <meta name="viewport" content="width=device-width,
       initial-scale=1.0"/>
+      <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div class="container">
-      <h1 class="form-title">Registration</h1>
+      <img src="images/image-equilibrium.jpg" alt="">
+      <h1 class="form-title">Registration for Equilibrium #3429</h1>
       <form action="#">
         <div class="main-user-info">
           <div class="user-input-box">
@@ -17,55 +23,63 @@
             <input type="text"
                     id="fullName"
                     name="fullName"
-                    placeholder="Enter Full Name"/>
+                    placeholder="Enter Full Name" required/>
           </div>
           <div class="user-input-box">
             <label for="username">Username</label>
             <input type="text"
                     id="username"
                     name="username"
-                    placeholder="Enter Username"/>
+                    placeholder="Enter Username" required/>
           </div>
           <div class="user-input-box">
             <label for="email">Email</label>
             <input type="email"
                     id="email"
                     name="email"
-                    placeholder="Enter Email"/>
+                    placeholder="e.g test@gmail.com" required/>
           </div>
           <div class="user-input-box">
             <label for="phoneNumber">Phone Number</label>
-            <input type="text"
+            <input type="tel"
                     id="phoneNumber"
                     name="phoneNumber"
-                    placeholder="Enter Phone Number"/>
+                    minlength="11"
+                    maxlength="11"
+                    placeholder="09*********" required/>
           </div>
           <div class="user-input-box">
             <label for="password">Password</label>
             <input type="password"
                     id="password"
                     name="password"
-                    placeholder="Enter Password"/>
+                    placeholder="Enter Password" required/>
           </div>
           <div class="user-input-box">
             <label for="confirmPassword">Confirm Password</label>
             <input type="password"
-                    id="confirmPassword"
+                    id="confirm_password"
                     name="confirmPassword"
-                    placeholder="Confirm Password"/>
-          </div>
-        </div>
-        <div class="gender-details-box">
+                    placeholder="Confirm Password" required/>
+          </div> <div class="gender-details-box">
           <span class="gender-title">Gender</span>
-          <div class="gender-category">
-            <input type="radio" name="gender" id="male">
+          <div class="gender-category" >
+            <input type="radio" name="gender" id="male" required>
             <label for="male">Male</label>
             <input type="radio" name="gender" id="female">
             <label for="female">Female</label>
             <input type="radio" name="gender" id="other">
             <label for="other">Other</label>
+          </div></div> 
+        
+       
+          
+        </div><div class="agree">
+            <input type="checkbox" required>
+            <label class="label" for="#"> Agree to the <a href="http://127.0.0.1:5500/index.html">terms and policies</a>  of the company</label>
+
           </div>
-        </div>
+          
         <div class="form-submit-btn">
           <input type="submit" value="Register">
         </div>
